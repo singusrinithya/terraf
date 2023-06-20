@@ -2,16 +2,16 @@ pipeline {
   agent any
 
   environment {
-    AWS_ACCESS_KEY_ID = 'AKIA4ALQMRQXOR2JHVVO'
-    AWS_SECRET_ACCESS_KEY = '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'
-    AWS_DEFAULT_REGION = 'ap-south-1'
+    AWS_ACCESS_KEY_ID = 'AKIAXZ7UM2UFOT5HIVNA'
+    AWS_SECRET_ACCESS_KEY = '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'
+    AWS_DEFAULT_REGION = 'us-east-1'
   }
 
   stages {
     stage('git') {
         steps {
             sh 'git init'
-            sh "git pull https://github.com/vrk2299/terr.git"
+            sh "git@github.com:singusrinithya/terraf.git"
         }
     }
     stage('Terraform Init') {
