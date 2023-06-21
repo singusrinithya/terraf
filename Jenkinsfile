@@ -10,8 +10,7 @@ pipeline {
   stages {
     stage('git') {
         steps {
-            sh 'git init'
-            sh "git@github.com:singusrinithya/terraf.git"
+            sh "git pull https://github.com/singusrinithya/terraf.git"
         }
     }
     stage('Terraform Init') {
